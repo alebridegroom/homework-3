@@ -40,3 +40,6 @@ Raymon Anthony Doane: 3.139% (11606)
 -------------------------
 Winner: Diana DeGette
 -------------------------
+
+# Outside source:
+Had tutor help me out with txt files and some of the pypoll code
