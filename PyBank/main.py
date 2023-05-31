@@ -31,10 +31,15 @@ with open(budget_date) as csvfile:
     min_profit = min(changes) #finding the min
     minprofit_date = tot_months[changes.index(min_profit)+1] #finding the data of the min using the index of where the number of where the min is located
     
-    print("Financial Analysis")
-    print("--------------------------")
-    print(f"Total Months: {tote_months}")
-    print(f"Total: ${profit_total}")
-    print(f"Average Change: {changes_profit}")
-    print(f"Greatest Increase in Profits: {maxprofit_date} (${(str(max_profit))})")
-    print(f"Greatest Decrease in Profits: {minprofit_date} (${(str(min_profit))})")
+result = f"""Financial Analysis
+--------------------------
+Total Months: {tote_months}
+Total: ${profit_total}
+Average Change: {changes_profit}
+Greatest Increase in Profits: {maxprofit_date} (${(str(max_profit))})
+Greatest Decrease in Profits: {minprofit_date} (${(str(min_profit))})"""
+print(result)
+
+output_path = "analysis/budget_analysis.txt"
+with open(output_path, 'w') as txt:
+    txt.write(result)
